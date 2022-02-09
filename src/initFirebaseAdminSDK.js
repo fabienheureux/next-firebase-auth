@@ -15,11 +15,6 @@ const initFirebaseAdminSDK = () => {
     }
     admin.initializeApp({
       ...firebaseAdminInitConfig,
-      credential: useFirebaseAdminDefaultCredential
-        ? admin.credential.applicationDefault()
-        : admin.credential.cert({
-            ...firebaseAdminInitConfig.credential,
-          }),
     })
   }
   return admin
